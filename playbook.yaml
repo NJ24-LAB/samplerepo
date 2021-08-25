@@ -24,7 +24,6 @@
         name: tomcat_deploy
         image: nj2497/myimage:latest
         state: started
-        command: sleep infinity
         published_ports:
           - 0.0.0.0:9090:8080
         
