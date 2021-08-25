@@ -3,4 +3,4 @@ LABEL tomcat deployment
 WORKDIR /usr/local/tomcat/webapps
 ADD . /usr/local/tomcat/webapps
 EXPOSE 8080
-ENTRYPOINT ["sh /usr/local/tomcat/bin/startup.sh"]
+CMD ["/usr/local/tomcat/bin/startup.sh", "run"]
