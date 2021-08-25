@@ -1,6 +1,6 @@
 FROM tomcat
 LABEL tomcat deployment
-ADD sample.war /usr/local/tomcat/webapps/sample.war
 WORKDIR /usr/local/tomcat/webapps
+ADD sample.war /usr/local/tomcat/webapps/sample.war
 EXPOSE 8080
-CMD ["/usr/local/tomcat/bin/startup.sh", "run"]
+ENTRYPOINT ["sh", "/usr/local/tomcat/bin/startup.sh"]
