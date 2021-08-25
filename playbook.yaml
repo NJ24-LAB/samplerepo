@@ -12,7 +12,7 @@
        state: present
    - name: Start service httpd, if not started
      service:
-        name: httpd
+        name: docker
         state: started
    - name: Create a docker container
      docker_container:
