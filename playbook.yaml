@@ -2,6 +2,10 @@
    remote_user: ec2-user
    become: yes
    tasks:
+    - name: Install the latest version of pythonpip
+      yum:
+        name: python3-pip
+        state: latest    
    - name: Install the latest version of docker
      yum:
        name: docker
@@ -13,3 +17,4 @@
         state: started
         published_ports:
           - 0.0.0.0:9090:8080
+        
