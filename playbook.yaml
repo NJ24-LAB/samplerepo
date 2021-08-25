@@ -10,10 +10,10 @@
      yum:
        name: docker
        state: present
-   - name: Install the latest version of docker-py
-     yum:
-       name: python-docker
-       state: present
+   - name: Start service httpd, if not started
+     service:
+        name: httpd
+        state: started
    - name: Create a docker container
      docker_container:
         name: tomcat_deploy
